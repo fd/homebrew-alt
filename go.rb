@@ -67,7 +67,7 @@ class Go < Formula
     ENV.delete('GOARCH')
     ENV.delete('CGO_ENABLED')
 
-    'pkg/obj'.rmtree
+    Pathname.new('pkg/obj').rmtree
 
     # Don't install header files; they aren't necessary and can
     # cause problems with other builds. See:
